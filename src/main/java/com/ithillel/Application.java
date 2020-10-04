@@ -27,8 +27,8 @@ public class Application {
 
     public static void main(String[] args) {
         Application application = new Application();
-        application.save("1", "simple text");
-        System.out.println(application.getByKey("1"));
+        application.save("1.txt", "simple text");
+        System.out.println(application.getByKey("1.txt"));
     }
 
 }

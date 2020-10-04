@@ -33,7 +33,7 @@ public class FileTextProcessor implements TextProcessor {
         if (isEmpty(key)) throw new IllegalArgumentException("key must be a set");
         try {
             Path resolve = Paths.get(path).resolve(key);
-            if (Files.exists(resolve)) throw new IllegalStateException("file not found");
+            if (!Files.exists(resolve)) throw new IllegalStateException("file not found");
             byte[] bytes = Files.readAllBytes(resolve);
             return new String(bytes, StandardCharsets.UTF_8);
         } catch (IOException e) {

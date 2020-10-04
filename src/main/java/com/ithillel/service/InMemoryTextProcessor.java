@@ -1,12 +1,10 @@
 package com.ithillel.service;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 public class InMemoryTextProcessor implements TextProcessor {
 
-    private Map<String, String> storage = new HashMap() ;
+    private Storage storage = new HashMapStorage();
 
     public void save(String key, final String text) {
         if (isEmpty(key)) throw new IllegalArgumentException("key must be a set");
@@ -21,7 +19,7 @@ public class InMemoryTextProcessor implements TextProcessor {
     public String getByKey(String key) {
         if (isEmpty(key)) throw new IllegalArgumentException("key must be a set");
         String text = storage.get(key);
-        if (text == null ) throw new IllegalStateException("key not found");
+        if (text == null) throw new IllegalStateException("key not found");
         return text;
     }
 }
