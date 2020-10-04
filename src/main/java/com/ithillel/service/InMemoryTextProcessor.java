@@ -4,7 +4,11 @@ import java.util.Objects;
 
 public class InMemoryTextProcessor implements TextProcessor {
 
-    private Storage storage = new HashMapStorage();
+    private final Storage storage;
+
+    public InMemoryTextProcessor(Storage storage) {
+        this.storage = storage;
+    }
 
     public void save(String key, final String text) {
         if (isEmpty(key)) throw new IllegalArgumentException("key must be a set");

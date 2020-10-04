@@ -19,7 +19,7 @@ public class PropertiesApplicationContext implements ApplicationContext {
         }
         String value = applicationProperties.getProperty(TEXT_PROCESSOR);
         try {
-            beans.put(TEXT_PROCESSOR, Class.forName(value).getDeclaredConstructor().newInstance());
+            beans.put(TEXT_PROCESSOR, Class.forName(value).getDeclaredConstructor(Storage.class).newInstance(new HashMapStorage()));
         } catch (Exception e) {
             e.printStackTrace();
         }
