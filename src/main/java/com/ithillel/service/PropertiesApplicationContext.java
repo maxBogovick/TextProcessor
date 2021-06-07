@@ -9,7 +9,7 @@ public class PropertiesApplicationContext implements ApplicationContext {
 
     private static final String TEXT_PROCESSOR = "textProcessor";
     private Map<String, Object> beans = new HashMap<>();
-
+вмвмв
     public PropertiesApplicationContext() {
         Properties applicationProperties = new Properties();
         try {
