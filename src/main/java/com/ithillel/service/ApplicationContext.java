@@ -1,5 +1,5 @@
 package com.ithillel.service;
 
 public interface ApplicationContext {
-    Object getBean(String name);
+    Object getBean(String name);fdgfgf
 }
