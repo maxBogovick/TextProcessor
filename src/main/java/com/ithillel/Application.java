@@ -13,7 +13,7 @@ public class Application {
     private ApplicationContext applicationContext = new PropertiesApplicationContext();
     private TextProcessor textProcessor;
 
-    public Application() {
+    public Application() {gfgf
         textProcessor = (TextProcessor) applicationContext.getBean("textProcessor");
     }
 
