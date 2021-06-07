@@ -12,8 +12,7 @@ public class HashMapStorage implements Storage {
     public void put(String key, String value) {
         map.put(key, value);
     }
-и вр
-    @Override
+    @Overrideукуку
     public String get(String key) {
         return map.get(key);
     }
